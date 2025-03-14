@@ -153,6 +153,9 @@ button {
 
 /* Intro */
 .intro-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     --intro-height: calc(100vh - var(--header-height) - 26px);
     width: 100%;
     height: var(--intro-height);
@@ -204,9 +207,12 @@ button {
 }
 
 .intro-img img {
-    width: 100%;
     height: var(--intro-height);
+    max-height: 584px;
     object-fit: cover;
+    position: absolute;
+    right: calc(max(77px, (100vw - 1110px) / 2 - 100px));
+    bottom: 0;
 }
 
 /* Client */
@@ -609,6 +615,10 @@ button {
     font-size: 1.6rem;
     color: #7a7a7e;
     white-space: nowrap;
+}
+
+.footer .item a:hover {
+    text-decoration: underline;
 }
 
 .footer .social {
